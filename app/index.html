@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<title>Hello SAPUI5</title>
+		<script id="sap-ui-bootstrap" type="text/javascript"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.ui.commons,sap.m"
+			data-sap-ui-resourceroots='{
+			"view" : "./view",
+			"model" : "./model",
+			"util" : "./util"
+		}'>
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script>
+			
+			// tell UI5 where to find stuff
+			sap.ui.localResources("util");
+			sap.ui.localResources("view");
+			jQuery.sap.registerModulePath('Application', 'Application');
+			
+			// launch application
+			jQuery.sap.require("Application");
+			var oApp = new Application({root : "content"});
+			
+		</script>
+	</head>
+	<body class="sapUiBody" id="content">
+	</body>
+</html>

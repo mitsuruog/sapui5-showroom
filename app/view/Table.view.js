@@ -1,3 +1,5 @@
+jQuery.sap.require("util.Formatter");
+
 sap.ui.jsview("view.Table", {
 
 	getControllerName: function() {
@@ -13,7 +15,23 @@ sap.ui.jsview("view.Table", {
 		});
 
 		var table = new sap.m.Table({
-			headerText: "Products",
+			id: 'lineItemList',
+			headerToolbar: new sap.m.Toolbar({
+				content: [
+					new sap.m.Text({
+						text: "Products"
+					}),
+					new sap.m.ToolbarSpacer(),
+					new sap.m.Button({
+						icon: "sap-icon://sort",
+						press: [oController.handleFilterChange, oController]
+					})
+				]
+			}),
+			growing: true,
+			growingThreshold: 5,
+			growingTriggerText: 'もっと見る',
+			noDataText: "データがありません。",
 			columns: [
 				new sap.m.Column({
 					width: "12em",
@@ -54,7 +72,7 @@ sap.ui.jsview("view.Table", {
 			items: {
 				path: "/ProductCollection",
 				//filter: oInitialFilter,
-				sorter: new sap.ui.model.Sorter("Name", false),
+				sorter: new sap.ui.model.Sorter("ProductId", false),
 				template: new sap.m.ColumnListItem({
 					cells: [
 						new sap.m.ObjectIdentifier({
@@ -65,12 +83,17 @@ sap.ui.jsview("view.Table", {
 							text: "{SupplierName}"
 						}),
 						new sap.m.Text({
-							text: "{Width} x {Depth} x {Height} {DimUnit}"
+							//[MEMO]複数設定すると表示できない。公式サイトだと出来てるっぽのに
+							//text: "{Width} x {Depth} x {Height} {DimUnit}"
+							text: "{Width}"
 						}),
 						new sap.m.ObjectNumber({
 							number: "{WeightMeasure}",
 							unit: "{WeightUnit}",
-							state: "{path:'WeightMeasure', formatter: 'util.Formatter.weightState'}"
+							state: {
+								path: 'WeightMeasure',
+								formatter: util.Formatter.weightState
+							}
 						}),
 						new sap.m.ObjectNumber({
 							number: "{Price}",
@@ -81,8 +104,10 @@ sap.ui.jsview("view.Table", {
 			}
 		});
 
+
 		this.page.addContent(table);
 
 		return this.page;
 	}
+
 });

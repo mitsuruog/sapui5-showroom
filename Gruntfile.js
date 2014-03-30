@@ -26,7 +26,8 @@ module.exports = function(grunt) {
 
   // configurable paths
   var yeomanConfig = {
-    app: 'app'
+    app: 'app',
+    coffee: 'coffee'
   };
 
   // Define the configuration for all the tasks
@@ -47,6 +48,12 @@ module.exports = function(grunt) {
           '<%= yeoman.app %>/css/**/*.css',
           '<%= yeoman.app %>/**/*.js'
         ]
+      },
+      coffee: {
+        files: [ 
+          '<%= yeoman.coffee %>/**/*.coffee'
+        ],
+        tasks: [ 'coffee' ]
       }
     },
 
@@ -71,6 +78,19 @@ module.exports = function(grunt) {
     open: {
       server: {
         path: 'http://localhost:' + SERVER_PORT
+      }
+    },
+
+    coffee: {
+      compile: {
+        expand: true,
+        flatten: false,
+        cwd: 'coffee/',
+        src: ['**/*.coffee'],
+        dest: 'app/',
+        ext: function(ext) {
+          return ext.replace(/coffee$/, 'js');
+        }
       }
     }
 

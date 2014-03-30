@@ -16,6 +16,10 @@ sap.ui.controller("view.Menu", {
 			title: 'Form validation',
 			text: '',
 			viewName: 'Validation'
+		},{
+			title: 'Custom Type',
+			text: '',
+			viewName: 'Type'
 		}]);
 		this.getView().setModel(menuModel, 'menu');
 

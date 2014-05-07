@@ -20,6 +20,9 @@ sap.ui.controller("view.Menu", {
 			title: 'Custom Type',
 			text: '',
 			viewName: 'Type'
+		},{
+			title: 'Fragment',
+			viewName: 'Fragment'
 		}]);
 		this.getView().setModel(menuModel, 'menu');
 

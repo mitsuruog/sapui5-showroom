@@ -106,7 +106,8 @@ sap.ui.jsview("view.Validation", {
 				new sap.m.DateTimeInput({
 					id: this.createId('date'),
 					value: {
-						path: '/date'
+						path: '/date',
+						type: new sap.ui.model.type.Date()
 					}
 				}),
 				new sap.m.Label({

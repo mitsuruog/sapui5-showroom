@@ -8,7 +8,7 @@ sap.ui.controller("view.Validation", {
 			url: '',
 			tel: '',
 			number: '',
-			date: '',
+			date: new Date(),
 			datetime: '',
 			time: '',
 			password: '',

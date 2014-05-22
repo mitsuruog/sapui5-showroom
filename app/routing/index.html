@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="UTF-8">
+        
+        <title>SAPUI5/OpenUI5 routing Sample</title>
+        
+        <script id="sap-ui-bootstrap"
+        src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-resourceroots='{
+            "com.mitsuruog.sapui5": "./",
+            "view": "./view"
+        }'>
+        </script>
+
+        <script>
+            sap.ui.getCore().attachInit(function() {
+                new sap.m.Shell({
+                    app: new sap.ui.core.ComponentContainer({
+                        name : "com.mitsuruog.sapui5"
+                    })
+                }).placeAt("content");
+            });
+        </script>
+    </head>
+    
+    <body class="sapUiBody" id="content" />
+    
+</html>

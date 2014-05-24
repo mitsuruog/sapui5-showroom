@@ -26,7 +26,7 @@ sap.ui.core.UIComponent.extend "com.mitsuruog.sapui5.Component",
         view: "Third"
         targetAggregation: "pages"
       }, {
-        pattern: "all*"
+        pattern: "{all*}"
         name: "NotFound"
         view: "NotFound"
         targetAggregation: "pages"

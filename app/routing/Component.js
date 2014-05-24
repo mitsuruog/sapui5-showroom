@@ -28,7 +28,7 @@
             view: "Third",
             targetAggregation: "pages"
           }, {
-            pattern: "{all*}",
+            pattern: ":all*:",
             name: "NotFound",
             view: "NotFound",
             targetAggregation: "pages"

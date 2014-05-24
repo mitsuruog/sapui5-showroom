@@ -3,7 +3,7 @@ sap.ui.controller "view.Second",
     @router = sap.ui.core.UIComponent.getRouterFor @
 
   back: ->
-    window.history.go -1
+    @router.navTo "First"
   
   next: ->
     @router.navTo "Third", 

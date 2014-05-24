@@ -4,7 +4,7 @@
       return this.router = sap.ui.core.UIComponent.getRouterFor(this);
     },
     back: function() {
-      return window.history.go(-1);
+      return this.router.navTo("First");
     },
     next: function() {
       return this.router.navTo("Third", {

@@ -12,6 +12,36 @@
             text: "Here is third page. ID is "
           }), new sap.m.Text({
             text: "{data>/id}"
+          }), new sap.m.IconTabBar({
+            id: "tabConteiner",
+            select: [oController.select, oController],
+            items: [
+              new sap.m.IconTabFilter({
+                key: "tab1",
+                icon: "sap-icon://hint",
+                content: [
+                  new sap.m.Text({
+                    text: "first tab"
+                  })
+                ]
+              }), new sap.m.IconTabFilter({
+                key: "tab2",
+                icon: "sap-icon://attachment",
+                content: [
+                  new sap.m.Text({
+                    text: "second tab"
+                  })
+                ]
+              }), new sap.m.IconTabFilter({
+                key: "tab3",
+                icon: "sap-icon://notes",
+                content: [
+                  new sap.m.Text({
+                    text: "third tab"
+                  })
+                ]
+              })
+            ]
           })
         ]
       });

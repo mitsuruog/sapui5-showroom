@@ -1,21 +1,27 @@
-sap.ui.jsview("view.App", {
 
-	getControllerName: function () {
-		return "view.App";
-	},
+/*
+App.view
+ */
 
-	createContent : function (oController) {
-		
-		// to avoid scrollbars on desktop the root view must be set to block display
-		this.setDisplayBlock(true);
-		
-		this.app = new sap.m.SplitApp({});
+(function() {
+  sap.ui.jsview("com.mitsuruog.sapui5.showroom.view.App", {
+    createContent: function(oController) {
+      this.setDisplayBlock(true);
+      this.app = new sap.m.SplitApp("appConteiner", {
+        afterDetailNavigate: function() {
+          return this.hideMaster();
+        },
+        homeIcon: {
+          "phone": "img/57_iPhone_Desktop_Launch.png",
+          "phone@2": "img/114_iPhone-Retina_Web_Clip.png",
+          "tablet": "img/72_iPad_Desktop_Launch.png",
+          "tablet@2": "img/144_iPad_Retina_Web_Clip.png",
+          "favicon": "favicon.ico",
+          "precomposed": false
+        }
+      });
+      return this.app;
+    }
+  });
 
-		this.app.addMasterPage(new sap.ui.jsview("Menu", "view.Menu"));
-		this.app.addDetailPage(new sap.ui.jsview("Home", "view.Home"));
-		
-		return this.app;
-
-	}
-	
-});
+}).call(this);

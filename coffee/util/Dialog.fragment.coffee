@@ -1,7 +1,7 @@
 ###
 ダイアログ用のFragments
 ###
-sap.ui.jsfragment "util.Dialog", 
+sap.ui.jsfragment "com.mitsuruog.sapui5.showroom.util.Dialog", 
 
   createContent: (oController) ->
 
@@ -9,7 +9,7 @@ sap.ui.jsfragment "util.Dialog",
       title: "Dialog"
       content: [
         #入力用のFragmentsを再利用します
-        sap.ui.jsfragment "util.Edit", oController
+        sap.ui.jsfragment "com.mitsuruog.sapui5.showroom.util.Edit", oController
       ]
       beginButton: new sap.m.Button
         type: "Accept"

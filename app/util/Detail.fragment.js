@@ -4,7 +4,7 @@
  */
 
 (function() {
-  sap.ui.jsfragment("util.Detail", {
+  sap.ui.jsfragment("com.mitsuruog.sapui5.showroom.util.Detail", {
     createContent: function(oController) {
       var detailForm, detailGrid;
       detailForm = new sap.ui.layout.form.SimpleForm({

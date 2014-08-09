@@ -1,35 +1,43 @@
-sap.ui.jsview("view.Menu", {
 
-	getControllerName: function() {
-		return "view.Menu";
-	},
+/*
+Menu.view
+ */
 
-	createContent: function(oController) {
-
-		this.page = new sap.m.Page({
-			title: "menu",
-			content: [],
-			footer: []
-		});
-
-		var list = new sap.m.List({
-      headerText: "sample",
-      items: {
-        path: "menu>/",
-        template: new sap.m.StandardListItem({
-        	type: sap.m.ListType.Navigation,
-          title: "{menu>title}",
-          description: "{menu>text}",
-          icon: "{menu>icon}",
-          iconDensityAware: false,
-          iconInset: false,
-          press: [oController.pressItem, oController]
+(function() {
+  sap.ui.jsview("com.mitsuruog.sapui5.showroom.view.Menu", {
+    getControllerName: function() {
+      return "com.mitsuruog.sapui5.showroom.view.Menu";
+    },
+    createContent: function(oController) {
+      var menuItems;
+      this.page = new sap.m.Page({
+        title: "Menu"
+      });
+      menuItems = [
+        new sap.m.DisplayListItem({
+          label: "Responsive form",
+          value: "Form",
+          type: "Navigation"
+        }), new sap.m.DisplayListItem({
+          label: "Form validation",
+          value: "Validation",
+          type: "Navigation"
+        }), new sap.m.DisplayListItem({
+          label: "Custom Type",
+          value: "Type",
+          type: "Navigation"
+        }), new sap.m.DisplayListItem({
+          label: "Fragment",
+          value: "Fragment",
+          type: "Navigation"
         })
-      }
-    });
+      ];
+      this.page.addContent(new sap.m.List({
+        items: menuItems,
+        itemPress: [oController.onItemPress, oController]
+      }));
+      return this.page;
+    }
+  });
 
-    this.page.addContent(list);
-
-		return this.page;
-	}
-});
+}).call(this);

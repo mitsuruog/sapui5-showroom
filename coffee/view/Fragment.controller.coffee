@@ -1,6 +1,6 @@
 jQuery.sap.require "sap.m.MessageToast"
 
-sap.ui.controller "view.Fragment",
+sap.ui.controller "com.mitsuruog.sapui5.showroom.view.Fragment",
 
   _fragments: {}
   _mode: "Detail"
@@ -8,7 +8,7 @@ sap.ui.controller "view.Fragment",
   _getFragments: (name) ->
     #fragmentsを取得してキャッシュ
     unless @_fragments[name]
-      @_fragments[name] = sap.ui.jsfragment "util.#{name}", @
+      @_fragments[name] = sap.ui.jsfragment "com.mitsuruog.sapui5.showroom.util.#{name}", @
     @_fragments[name]
 
   _toggleFragment: (name) ->

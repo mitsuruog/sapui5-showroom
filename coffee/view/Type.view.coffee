@@ -1,16 +1,13 @@
-jQuery.sap.require "util.Type"
+jQuery.sap.require "com.mitsuruog.sapui5.showroom.util.Type"
 
-sap.ui.jsview "view.Type",
+sap.ui.jsview "com.mitsuruog.sapui5.showroom.view.Type",
 
-	getControllerName: ->
-		"view.Type"
+	getControllerName: -> "com.mitsuruog.sapui5.showroom.view.Type"
 
 	createContent: (oController) ->
 
 		@page = new sap.m.Page 
-			title: "custom type system",
-			content: [],
-			footer: []
+			title: "custom type system"
 
 		input = new sap.m.Input "hoge"
 		input.bindProperty "value",

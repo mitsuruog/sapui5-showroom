@@ -4,12 +4,12 @@
  */
 
 (function() {
-  sap.ui.jsfragment("util.Dialog", {
+  sap.ui.jsfragment("com.mitsuruog.sapui5.showroom.util.Dialog", {
     createContent: function(oController) {
       var dialog;
       return dialog = new sap.m.Dialog({
         title: "Dialog",
-        content: [sap.ui.jsfragment("util.Edit", oController)],
+        content: [sap.ui.jsfragment("com.mitsuruog.sapui5.showroom.util.Edit", oController)],
         beginButton: new sap.m.Button({
           type: "Accept",
           text: "OK",

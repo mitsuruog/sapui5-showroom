@@ -1,4 +1,4 @@
-jQuery.sap.declare "util.Type"
+jQuery.sap.declare "com.mitsuruog.sapui5.showroom.util.Type"
 
 sap.ui.model.SimpleType.extend "util.Type.hoge",
 

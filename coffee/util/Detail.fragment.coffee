@@ -1,7 +1,7 @@
 ###
 参照用のFragments
 ###
-sap.ui.jsfragment "util.Detail", 
+sap.ui.jsfragment "com.mitsuruog.sapui5.showroom.util.Detail", 
 
   createContent: (oController) ->
     

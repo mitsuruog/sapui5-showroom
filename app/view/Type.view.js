@@ -1,16 +1,14 @@
 (function() {
-  jQuery.sap.require("util.Type");
+  jQuery.sap.require("com.mitsuruog.sapui5.showroom.util.Type");
 
-  sap.ui.jsview("view.Type", {
+  sap.ui.jsview("com.mitsuruog.sapui5.showroom.view.Type", {
     getControllerName: function() {
-      return "view.Type";
+      return "com.mitsuruog.sapui5.showroom.view.Type";
     },
     createContent: function(oController) {
       var input;
       this.page = new sap.m.Page({
-        title: "custom type system",
-        content: [],
-        footer: []
+        title: "custom type system"
       });
       input = new sap.m.Input("hoge");
       input.bindProperty("value", {

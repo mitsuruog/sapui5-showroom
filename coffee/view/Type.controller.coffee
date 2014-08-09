@@ -1,4 +1,4 @@
-sap.ui.controller "view.Type", 
+sap.ui.controller "com.mitsuruog.sapui5.showroom.view.Type", 
 
   onInit: ->
     model = new sap.ui.model.json.JSONModel

@@ -1,5 +1,5 @@
 (function() {
-  sap.ui.controller("view.Type", {
+  sap.ui.controller("com.mitsuruog.sapui5.showroom.view.Type", {
     onInit: function() {
       var model;
       model = new sap.ui.model.json.JSONModel({

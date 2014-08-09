@@ -1,12 +1,12 @@
 (function() {
   jQuery.sap.require("sap.m.MessageToast");
 
-  sap.ui.controller("view.Fragment", {
+  sap.ui.controller("com.mitsuruog.sapui5.showroom.view.Fragment", {
     _fragments: {},
     _mode: "Detail",
     _getFragments: function(name) {
       if (!this._fragments[name]) {
-        this._fragments[name] = sap.ui.jsfragment("util." + name, this);
+        this._fragments[name] = sap.ui.jsfragment("com.mitsuruog.sapui5.showroom.util." + name, this);
       }
       return this._fragments[name];
     },

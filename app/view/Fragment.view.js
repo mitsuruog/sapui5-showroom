@@ -1,7 +1,7 @@
 (function() {
-  sap.ui.jsview("view.Fragment", {
+  sap.ui.jsview("com.mitsuruog.sapui5.showroom.view.Fragment", {
     getControllerName: function() {
-      return "view.Fragment";
+      return "com.mitsuruog.sapui5.showroom.view.Fragment";
     },
     createContent: function(oController) {
       var footer;

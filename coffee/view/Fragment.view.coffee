@@ -1,7 +1,6 @@
-sap.ui.jsview "view.Fragment",
+sap.ui.jsview "com.mitsuruog.sapui5.showroom.view.Fragment",
 
-  getControllerName: ->
-    "view.Fragment"
+  getControllerName: -> "com.mitsuruog.sapui5.showroom.view.Fragment"
 
   createContent: (oController) ->
 

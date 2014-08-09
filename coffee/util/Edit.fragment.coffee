@@ -1,7 +1,7 @@
 ###
 入力用のFragments
 ###
-sap.ui.jsfragment "util.Edit", 
+sap.ui.jsfragment "com.mitsuruog.sapui5.showroom.util.Edit", 
 
   createContent: (oController) ->
     

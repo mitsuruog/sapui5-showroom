@@ -49,6 +49,11 @@ sap.ui.core.UIComponent.extend "com.mitsuruog.sapui5.showroom.Component",
           view: "Fragment"
           viewLevel: 1
         }, {
+          pattern: "locale"
+          name: "Locale"
+          view: "Locale"
+          viewLevel: 1
+        }, {
           pattern: "{all*}"
           name: "NotFound"
           view: "NotFound"

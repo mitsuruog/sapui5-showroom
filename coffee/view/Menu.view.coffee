@@ -26,7 +26,11 @@ sap.ui.jsview "com.mitsuruog.sapui5.showroom.view.Menu",
         label: "Fragment"
         value: "Fragment"
         type: "Navigation"
-    ]
+      new sap.m.DisplayListItem
+        label: "Locale"
+        value: "Locale"
+        type: "Navigation"
+      ]
 
     @page.addContent new sap.m.List
       items: menuItems

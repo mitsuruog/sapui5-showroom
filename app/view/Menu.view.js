@@ -30,6 +30,10 @@ Menu.view
           label: "Fragment",
           value: "Fragment",
           type: "Navigation"
+        }), new sap.m.DisplayListItem({
+          label: "Locale",
+          value: "Locale",
+          type: "Navigation"
         })
       ];
       this.page.addContent(new sap.m.List({

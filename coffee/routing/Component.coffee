@@ -21,7 +21,7 @@ sap.ui.core.UIComponent.extend "com.mitsuruog.sapui5.Component",
         view: "Second"
         targetAggregation: "pages"
       }, {
-        pattern: "third/{id}/:tab:"
+        pattern: "third/{id}/:tab?:"
         name: "Third"
         view: "Third"
         targetAggregation: "pages"

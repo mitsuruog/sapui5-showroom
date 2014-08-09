@@ -23,7 +23,7 @@
             view: "Second",
             targetAggregation: "pages"
           }, {
-            pattern: "third/{id}/:tab:",
+            pattern: "third/{id}/:tab?:",
             name: "Third",
             view: "Third",
             targetAggregation: "pages"

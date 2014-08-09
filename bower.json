@@ -1,6 +1,7 @@
 {
   "name": "sapui5-showroom",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "openui5-bower": "~1.22.4"
+  }
 }
-

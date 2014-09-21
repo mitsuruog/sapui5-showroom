@@ -60,6 +60,11 @@ Component
                 view: "Locale",
                 viewLevel: 1
               }, {
+                pattern: "syncbind",
+                name: "Syncbind",
+                view: "Syncbind",
+                viewLevel: 1
+              }, {
                 pattern: "{all*}",
                 name: "NotFound",
                 view: "NotFound"

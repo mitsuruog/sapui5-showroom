@@ -19,6 +19,10 @@ sap.ui.jsview "com.mitsuruog.sapui5.showroom.view.Menu",
         value: "Validation"
         type: "Navigation"
       new sap.m.DisplayListItem
+        label: "Synchronized Data Binding"
+        value: "Syncbind"
+        type: "Navigation"
+      new sap.m.DisplayListItem
         label: "Custom Type"
         value: "Type"
         type: "Navigation"

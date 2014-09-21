@@ -54,6 +54,11 @@ sap.ui.core.UIComponent.extend "com.mitsuruog.sapui5.showroom.Component",
           view: "Locale"
           viewLevel: 1
         }, {
+          pattern: "syncbind"
+          name: "Syncbind"
+          view: "Syncbind"
+          viewLevel: 1
+        }, {
           pattern: "{all*}"
           name: "NotFound"
           view: "NotFound"

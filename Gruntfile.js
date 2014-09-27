@@ -50,10 +50,10 @@ module.exports = function(grunt) {
         ]
       },
       coffee: {
-        files: [ 
+        files: [
           '<%= yeoman.coffee %>/**/*.coffee'
         ],
-        tasks: [ 'coffee' ]
+        tasks: ['coffee']
       }
     },
 
@@ -92,6 +92,14 @@ module.exports = function(grunt) {
           return ext.replace(/coffee$/, 'js');
         }
       }
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'app',
+        clone: 'temp/sapui5-showroom'
+      },
+      src: ['**']
     }
 
   });
@@ -105,8 +113,10 @@ module.exports = function(grunt) {
     ]);
   });
 
+  grunt.registerTask('deploy', ['gh-pages']);
+
   grunt.registerTask('default', [
     'server'
   ]);
-  
+
 };

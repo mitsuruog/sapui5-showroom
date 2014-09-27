@@ -59,6 +59,11 @@ sap.ui.core.UIComponent.extend "com.mitsuruog.sapui5.showroom.Component",
           view: "Syncbind"
           viewLevel: 1
         }, {
+          pattern: "controls"
+          name: "Controls"
+          view: "Controls"
+          viewLevel: 1
+        }, {
           pattern: "{all*}"
           name: "NotFound"
           view: "NotFound"

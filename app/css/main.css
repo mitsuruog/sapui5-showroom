@@ -1,1 +1,22 @@
 @charset "UTF-8";
+
+/* mitsuruog-card
+   ========================================================================== */
+.mitsuruog-card {
+    display: inline-block;
+    border: 1px solid #000;
+    background: #f3f3f3;
+    text-align: center;
+    padding: 8px;
+    margin: 3px;
+}
+
+.pink {
+    color: #fff;
+    background: #D45D87;
+}
+
+.blue {
+    color: #fff;
+    background: #007AB7;
+}

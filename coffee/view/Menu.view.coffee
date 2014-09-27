@@ -27,6 +27,10 @@ sap.ui.jsview "com.mitsuruog.sapui5.showroom.view.Menu",
         value: "Type"
         type: "Navigation"
       new sap.m.DisplayListItem
+        label: "Custom Controls"
+        value: "Controls"
+        type: "Navigation"
+      new sap.m.DisplayListItem
         label: "Fragment"
         value: "Fragment"
         type: "Navigation"

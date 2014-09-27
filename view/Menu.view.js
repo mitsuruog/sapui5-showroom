@@ -31,6 +31,10 @@ Menu.view
           value: "Type",
           type: "Navigation"
         }), new sap.m.DisplayListItem({
+          label: "Custom Controls",
+          value: "Controls",
+          type: "Navigation"
+        }), new sap.m.DisplayListItem({
           label: "Fragment",
           value: "Fragment",
           type: "Navigation"

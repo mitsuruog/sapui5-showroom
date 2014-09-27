@@ -65,6 +65,11 @@ Component
                 view: "Syncbind",
                 viewLevel: 1
               }, {
+                pattern: "controls",
+                name: "Controls",
+                view: "Controls",
+                viewLevel: 1
+              }, {
                 pattern: "{all*}",
                 name: "NotFound",
                 view: "NotFound"

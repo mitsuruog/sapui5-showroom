@@ -7,12 +7,14 @@
 
   jQuery.sap.require("com.mitsuruog.sapui5.showroom.controls.HoverButton");
 
+  jQuery.sap.require("com.mitsuruog.sapui5.showroom.controls.NoisyInput");
+
   sap.ui.jsview("com.mitsuruog.sapui5.showroom.view.Controls", {
     getControllerName: function() {
       return "com.mitsuruog.sapui5.showroom.view.Controls";
     },
     createContent: function(oController) {
-      var panel1, panel2, panel3, pinkCard;
+      var panel1, panel2, panel3, panel4, pinkCard;
       this.page = new sap.m.Page({
         title: "Creating custom controls"
       }, panel1 = new sap.m.Panel({
@@ -62,10 +64,21 @@
             ]
           })
         ]
+      }), panel4 = new sap.m.Panel({
+        headerText: "Extending control and add new feature",
+        content: [
+          new mitsuruog.NoisyInput({
+            value: "be noisy"
+          }), new mitsuruog.NoisyInput({
+            value: "be quiet",
+            beQuiet: true
+          })
+        ]
       }));
       this.page.addContent(panel1);
       this.page.addContent(panel2);
       this.page.addContent(panel3);
+      this.page.addContent(panel4);
       return this.page;
     }
   });

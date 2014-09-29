@@ -2,6 +2,7 @@ jQuery.sap.require "com.mitsuruog.sapui5.showroom.controls.SayHello"
 jQuery.sap.require "com.mitsuruog.sapui5.showroom.controls.Card"
 jQuery.sap.require "com.mitsuruog.sapui5.showroom.controls.BlueContainer"
 jQuery.sap.require "com.mitsuruog.sapui5.showroom.controls.HoverButton"
+jQuery.sap.require "com.mitsuruog.sapui5.showroom.controls.NoisyInput"
 
 sap.ui.jsview "com.mitsuruog.sapui5.showroom.view.Controls",
 
@@ -59,9 +60,20 @@ sap.ui.jsview "com.mitsuruog.sapui5.showroom.view.Controls",
                 hover: oController.handleHover
             ]
         ]
+        
+      panel4 = new sap.m.Panel
+        headerText: "Extending control and add new feature"
+        content: [
+          new mitsuruog.NoisyInput
+            value: "be noisy"
+          new mitsuruog.NoisyInput
+            value: "be quiet"
+            beQuiet: true
+        ]
       
     @page.addContent panel1
     @page.addContent panel2
     @page.addContent panel3
-
+    @page.addContent panel4
+    
     @page

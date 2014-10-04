@@ -21,12 +21,10 @@
       }
     },
     init: function() {
-      var self;
-      sap.m.Input.prototype.init.apply(this, arguments);
-      return self = this;
+      return sap.m.Input.prototype.init.apply(this, arguments);
     },
     onBeforeRendering: function() {
-      return sap.m.Input.prototype.onBeforeRendering(this, arguments);
+      return sap.m.Input.prototype.onBeforeRendering.apply(this, arguments);
     },
     renderer: {
       addInnerStyles: function(rm, control) {
